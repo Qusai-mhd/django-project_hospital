@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+		<link href="{% static 'style.css' %}" rel="stylesheet">
+	    <style>
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-container img {
+            width: 48%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+   
+	<section class="home-info">
+		<div class="home-info-item">
+
+		</div>
+		<div class="home-info-item">
+
+		</div>
+		<div class="home-info-item">
+
+		</div>
+	</section>
+    <div class="image-container">
+        <img src="{% static 'image/Doc1.PNG' %}" alt="HD">
+        <img src="{% static 'image/Doc2.PNG' %}" alt="HD">
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link href="{% static 'style.css' %}" rel="stylesheet">
+<style>
+            .image-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-container img {
+            width: 45%; /* Adjust the width as needed */
+            height: 80%;
+
+        }
+</style>
+<div class="image-container">
+    <img src="{% static 'image/Pat1.PNG' %}" alt="HD">
+    <section class="form">
+
+
+        <h2>Book an Appointment</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </section>
+
+
+        <img src="{% static 'image/Pat2.PNG' %}" alt="HD">
+    </div>
+
+{% endblock %}

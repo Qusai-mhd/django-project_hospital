@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link href="{% static 'style.css' %}" rel="stylesheet">
+<body>
+
+	<div class="form">
+		<h2>Login with your doctor account</h2>
+		<form method="POST">
+			{% csrf_token %}
+
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required><br>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required><br>
+
+			<button type="submit">Login</button>
+		</form>
+	</div>
+<img src="{% static 'image/Doc3.PNG' %}" alt="HD" align="center" width="35%" height="42%">
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,103 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    text-align: center;
+    background-color:hsla(237,100%,80%,1);
+    background-image:
+    radial-gradient(at 7% 4%, hsla(196,60%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 97% 100%, hsla(187,83%,75%,1) 0px, transparent 50%),
+    radial-gradient(at 87% 24%, hsla(263,97%,65%,1) 0px, transparent 50%);
+  }
+  ul {
+    list-style: none;
+    background: #22438c;
+    text-align: center;
+  }
+  ul li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+  ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+  }
+  ul li ul.dropdown li {
+    display: block;
+    text-align: center;
+  }
+  ul li ul.dropdown {
+    width: 100%;
+    background: #22438c;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    text-align: center;
+    padding: 0;
+  }
+  ul li:hover > ul.dropdown {
+    display: block;
+  }
+  .form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    color:white;
+    background-color: #22408C;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+  }
+  
+  .form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="tel"],
+  .form input[type="password"],
+  .form select,
+  .form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px #ccc;
+  }
+  
+  .form textarea {
+    height: 200px;
+  }
+  
+  .form button[type="submit"] {
+    background-color: #15fbff;
+    color: black;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #ccc;
+    cursor: pointer;
+  }
+  
+  .form button[type="submit"]:hover {
+    background-color: #0062ff;
+  }
+  
+  

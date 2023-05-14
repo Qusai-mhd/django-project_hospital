@@ -1,0 +1,26 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <nav>
+        <ul>
+          <li><a href="{% url 'admin-dash' %}">Home</a></li>
+          <li><a href="{% url 'patient-messages' %}">Patient Messages</a></li>
+          <li><a href="{% url 'create-user' %}">Create new user</a></li>
+          <li><a href="{% url 'list-users' %}">Employees</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+          <li>
+          </li>
+          {% if user.is_authenticated  %}
+          <li style="color: lime; font-size: x-large;">Welcome, {{user.name}}</li>
+          {% endif %}
+        </ul>
+      </nav>
+</head>
+<body>
+    {% block content %}    
+        
+    {% endblock %}
+</body>
+</html>

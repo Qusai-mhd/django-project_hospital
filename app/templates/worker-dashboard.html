@@ -1,0 +1,72 @@
+{% load static %}
+
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <style>
+          body {
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+            text-align: center;
+          }
+          
+          table {
+            margin: 50px auto;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 800px;
+          }
+          
+          th {
+            background-color: #22438c;
+            color: white;
+            font-size: 20px;
+            font-weight: normal;
+            padding: 10px;
+            text-align: center;
+          }
+          
+          td {
+            background-color: #f5f5f5;
+            color: #333;
+            font-size: 18px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+          }
+        </style>
+</head>
+    <nav>
+        <ul>
+          <li><a href="{% url 'worker-dash' %}">Home</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+          <li>
+          </li>
+          {% if user.is_authenticated  %}
+          <li style="color: lime; font-size: x-large;">Welcome, {{user.name}}</li>
+          {% endif %}
+        </ul>
+      </nav>
+      <body>
+<table>
+    <thead>
+      <tr>
+        <th>Patient</th>
+        <th>Phone</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for appointment in appointments %}
+      <tr>
+        <td>{{appointment.patient.name}}</td>
+        <td>{{appointment.patient.phone}}</td>
+        <td>{{appointment.date}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+      </body>
+</html>

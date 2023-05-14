@@ -1,0 +1,36 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <head>
+        <title>Hospital Name</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+</head>
+    <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'appointments' %}">Appointments</a></li>
+          <li>
+            <a href="{% url 'login-admin' %}" >Login <span>&#9662;</span></a>
+            <ul class="dropdown" id="dropdown-menu">
+              <li><a href="{% url 'login-doctor' %}">Doctor</a></li>
+              <li><a href="{% url 'login-nurse' %}">Nurse</a></li>
+              <li><a href="{% url 'login-worker' %}">Worker</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+          {% if user.is_authenticated  %}
+          <li style="color: lime; font-size: x-large;">Welcome, {{user.name}}</li>
+          {% endif %}
+        </ul>
+      </nav>
+      <body>
+        {% block content %}    
+        
+        {% endblock %}
+
+        <script src="{% static 'script.js' %}"></script>
+
+      </body>
+</html>

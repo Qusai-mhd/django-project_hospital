@@ -1,0 +1,10 @@
+{% extends 'base_admin.html' %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+        Are you sure you want to delete the user?
+    <button style="height:50px;width:100px; font-weight:bold; font-size:100%;" type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+{% endblock %}
