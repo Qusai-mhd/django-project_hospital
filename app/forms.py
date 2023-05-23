@@ -41,7 +41,7 @@ class ContactForm(forms.Form):
         contact = Contact(name=name, email=email, message=message)
         contact.save()
 
-
+ 
 
 class UserForm(forms.Form):
     email = forms.EmailField()
